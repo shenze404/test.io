@@ -3,36 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>角色设计与世界观展示</title>
-    <!-- 直接引用根目录下的 style.css -->
+    <title>Alien Stage</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>欢迎来到角色设计与世界观展示</h1>
-        <nav>
-            <ul>
-                <li><a href="characters.html">角色介绍</a></li>
-                <li><a href="battle.html">对战情况</a></li>
-                <li><a href="news.html">新闻</a></li>
-                <li><a href="forum.html">论坛</a></li>
-                <li><a href="worldview.html">世界观介绍</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- 第一屏（主页） -->
+    <div id="home-screen" class="screen">
+        <header>
+            < img src="logo.png" alt="Alien Stage Logo" class="logo">
+        </header>
+        <main>
+            <!-- 替换标题为图片 -->
+            < img src="title.png" alt="ALIEN STAGE" class="title-img">
+            <p class="subtitle">阿纳特花园 第60届</p >
+            <!-- 替换 START 按钮为图片 -->
+            < img src="start-btn.png" alt="START" id="start-btn" class="start-btn">
+        </main>
+    </div>
 
-    <main>
-        <section id="intro">
-            <h2>角色设计展示</h2>
-            <p>这里展示你设计的角色和他们的世界。</p>
-        </section>
-    </main>
+    <!-- 第二屏（菜单页） -->
+    <div id="menu-screen" class="screen hidden">
+        <header>
+            < img src="logo.png" alt="Alien Stage Logo" class="logo">
+        </header>
+        <main class="menu">
+            选手介绍
+            观众论坛
+            赛事信息
+            最新消息
+        </main>
+    </div>
 
-    <footer>
-        <p>&copy; 2025 角色设计与世界观展示</p>
-    </footer>
-
-    <!-- 引用 JavaScript 文件 -->
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
