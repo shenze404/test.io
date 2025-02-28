@@ -1,83 +1,107 @@
-/* 基本页面样式 */
+/* 基本样式 */
 body {
-    background: linear-gradient(to bottom, 
-        rgba(0, 0, 10, 1),        /* 黑色 */
-        rgba(26, 36, 53, 0.8),    /* 深灰色（中间色，带透明度） */
-        rgba(6, 32, 83, 1)        /* 深蓝色 */
-    );
-    background-size: cover; /* 背景自适应填充整个页面 */
-    background-position: center; /* 确保背景居中 */
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #00000a, #062053);
+    text-align: center;
+    color: white;
+    overflow: hidden;
 }
 
-/* 顶部导航栏样式 */
-header {
-    background-color: rgba(0, 0, 0, 0.7); /* 半透明的黑色背景 */
-    color: white;
-    padding: 20px;
-    text-align: center;
-    position: fixed; /* 固定在页面顶部 */
-    width: 100%; /* 使导航栏占据全宽 */
+/* 隐藏第二屏（默认状态） */
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* 过渡动画 */
+.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 1s ease-in;
+    pointer-events: auto;
+}
+
+/* 第一屏（主页）样式 */
+.screen {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
     top: 0;
     left: 0;
-    z-index: 10; /* 确保它在页面其他内容之上 */
-}
-
-header nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-header nav ul li {
-    display: inline;
-    margin: 0 20px;
-}
-
-header nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease;
-}
-
-header nav ul li a:hover {
-    color: #ff7e5f; /* 鼠标悬停时改变文字颜色 */
-}
-
-/* 主内容区样式 */
-main {
-    padding: 100px 20px 20px 20px; /* 上面有导航栏，留出一些空白 */
-    text-align: center;
-}
-
-#intro {
-    background-color: rgba(255, 255, 255, 0.8); /* 半透明白色背景 */
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 600px; /* 最大宽度，避免太大 */
-}
-
-h1 {
-    font-size: 36px;
-    font-weight: bold;
-}
-
-h2 {
-    font-size: 28px;
-    color: #333;
-}
-
-/* 底部样式 */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    position: fixed;
-    bottom: 0;
     width: 100%;
+    height: 100%;
+}
+
+/* LOGO 样式 */
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 120px;
+}
+
+/* 标题图片 */
+.title-img {
+    width: 60%;
+    max-width: 600px;
+}
+
+/* 副标题 */
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    margin-top: 10px;
+}
+
+/* START 按钮图片 */
+.start-btn {
+    margin-top: 40px;
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.start-btn:hover {
+    transform: scale(1.1);
+}
+
+/* 菜单屏幕 */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 80%;
+}
+
+/* 菜单按钮 */
+.menu-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 200px;
+    background: linear-gradient(to bottom, #0a1a3d, #1976d2);
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.menu-btn:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to bottom, #0c2a6d, #2196f3);
 }
