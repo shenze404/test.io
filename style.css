@@ -1,11 +1,15 @@
 /* 基本页面样式 */
 body {
-    background: linear-gradient(to bottom, #00000a, #062053); /* 上黑下蓝的渐变 */
-    background-size: cover; /* 背景图像自适应页面大小 */
-    background-position: center; /* 背景图像居中 */
+    background: linear-gradient(to bottom, 
+        rgba(0, 0, 10, 1),        /* 黑色 */
+        rgba(26, 36, 53, 0.8),    /* 深灰色（中间色，带透明度） */
+        rgba(6, 32, 83, 1)        /* 深蓝色 */
+    );
+    background-size: cover; /* 背景自适应填充整个页面 */
+    background-position: center; /* 确保背景居中 */
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
 }
 
 /* 顶部导航栏样式 */
